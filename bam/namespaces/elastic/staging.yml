@@ -1,0 +1,32 @@
+apiVersion: elasticsearch.k8s.elastic.co/v1
+kind: Elasticsearch
+metadata:
+  name: staging
+spec:
+  version: 7.5.2
+  http:                  
+    service:
+      spec:
+        type: LoadBalancer
+  nodeSets:
+  - name: master
+    count: 1
+    config:
+      node.master: true
+      node.data: true
+      node.ingest: true
+      node.store.allow_mmap: false
+---
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: staging
+spec:
+  version: 7.5.2
+  http:                  
+    service:
+      spec:
+        type: LoadBalancer
+  count: 1
+  elasticsearchRef:
+    name: elastic

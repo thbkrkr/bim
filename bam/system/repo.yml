@@ -1,0 +1,6 @@
+apiVersion: configmanagement.gke.io/v1
+kind: Repo
+metadata:
+  name: bam
+spec:
+  version: 1.0.0

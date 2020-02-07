@@ -1,0 +1,11 @@
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+  clusterName: thb-dev-15
+  git:
+    syncRepo: https://github.com/thbkrkr/bim.git
+    policyDir: "bam"
+    secretType: none
+    syncWait: 60
