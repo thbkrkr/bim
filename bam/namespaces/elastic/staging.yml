@@ -4,7 +4,7 @@ metadata:
   name: staging
 spec:
   version: 7.5.2
-  http:                  
+  http:
     service:
       spec:
         type: LoadBalancer
@@ -23,10 +23,10 @@ metadata:
   name: staging
 spec:
   version: 7.5.2
-  http:                  
+  http:
     service:
       spec:
         type: LoadBalancer
   count: 1
   elasticsearchRef:
-    name: elastic
+    name: staging
