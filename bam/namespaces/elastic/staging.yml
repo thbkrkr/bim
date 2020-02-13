@@ -3,7 +3,7 @@ kind: Elasticsearch
 metadata:
   name: staging
 spec:
-  version: 7.5.2
+  version: 7.6.0
   http:
     service:
       spec:
@@ -22,7 +22,7 @@ kind: Kibana
 metadata:
   name: staging
 spec:
-  version: 7.5.2
+  version: 7.6.0
   http:
     service:
       spec:
